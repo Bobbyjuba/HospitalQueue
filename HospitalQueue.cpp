@@ -52,7 +52,7 @@ void HospitalQueue::addPatient(std::string _first, std::string _last, int _ident
 
 void HospitalQueue::addCriticalPatient(std::string _first, std::string _last, int _identification) {
 	if (patientCount >= capacity) {
-		std::cout << "\nHospital is at maximum capacity.\n";
+		std::cout << "Hospital is at maximum capacity.\n";
 
 		return;
 	}
@@ -143,7 +143,7 @@ void HospitalQueue::addCriticalPatient(std::string _first, std::string _last, in
 
 void HospitalQueue::operate() {
 	if (this->head == NULL) {
-		std::cout << "\nThere are no patients to operate on.\n";
+		std::cout << "There are no patients to operate on.\n";
 
 		patientCount = 0;
 
@@ -158,7 +158,7 @@ void HospitalQueue::operate() {
 
 	this->head = temp;
 
-	std::cout << "\nPatient moved out of queue for operation.\n";
+	std::cout << "Patient moved out of queue for operation.\n";
 
 
 	temp = NULL;
@@ -205,7 +205,7 @@ void HospitalQueue::removePatient(int _identification) {
 		}
 
 		if (temp2 == NULL) {
-			std::cout << "\nPatient with ID of " << _identification << " was not found.\n";
+			std::cout << "Patient with ID of " << _identification << " was not found.\n";
 
 			temp = NULL;
 			temp2 = NULL;
@@ -235,7 +235,7 @@ void HospitalQueue::removePatient(int _identification) {
 
 void HospitalQueue::listPatients() {
 	if (this->head == NULL) {
-		std::cout << "\nThere are no patients to list.\n";
+		std::cout << "There are no patients to list.\n";
 
 		patientCount = 0;
 
@@ -248,7 +248,7 @@ void HospitalQueue::listPatients() {
 		std::string name = temp->first + " " + temp->last;
 		std::string critical = (temp->isCritical) ? "Yes" : "No";
 
-		std::cout << "\nPatient Name: " << name << " | Patient ID: " << temp->identification << " | Critical: " << critical << "\n";
+		std::cout << "Patient Name: " << name << " | Patient ID: " << temp->identification << " | Critical: " << critical << "\n";
 
 		temp = temp->next;
 	}

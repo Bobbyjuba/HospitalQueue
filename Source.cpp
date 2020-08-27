@@ -2,7 +2,7 @@
 #include <string>
 #include "HospitalQueue.h"
 
-void menu(HospitalQueue& hospitalQueue);
+void menu(HospitalQueue hospitalQueue);
 void clear();
 
 int main() {
@@ -13,7 +13,7 @@ int main() {
 	return 0;
 }
 
-void menu(HospitalQueue& hospitalQueue) {
+void menu(HospitalQueue hospitalQueue) {
 	std::cout << "----------------------------------\n";
 	std::cout << "Welcome to the hospital queue menu\n\n";
 	std::cout << "1. Add a patient\n";
